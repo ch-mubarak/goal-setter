@@ -5,8 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",
-    "dev": "nodemon backend/server.js",
-    "client": "npm start --prefix frontend"
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Mubarak CH",
   "license": "MIT",
@@ -20,6 +21,7 @@
     "mongoose": "^6.7.2"
   },
   "devDependencies": {
+    "concurrently": "^7.5.0",
     "nodemon": "^2.0.20"
   }
 }

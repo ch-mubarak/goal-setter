@@ -13,7 +13,7 @@ const goalRoute = require("./routes/goals");
 const userRoute = require("./routes/user");
 
 app.use("/api/goals", goalRoute);
-app.use("/api/user", userRoute);
+app.use("/api/users", userRoute);
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
